@@ -85,9 +85,14 @@ label unemployed_choice:
     player "With a small, somewhat sheepish smile. \"I'm currently between jobs, so… unemployed.\""
     neko_girl "Her expression softens with understanding, and she offers a sympathetic smile. \"I know how that feels. I've been on and off work myself while trying to stay in school. It's not easy, especially since I have to pay just to remain free and be a full-time student.\""
     "She pauses, her gaze drifting to the table for a moment before she looks back up at you."
-    neko_girl "I'm studying graphic art design. It's what I really love, and I hope to get into a field where I can put my skills to use. But… if I can't find steady income soon, I might have to find a master who would protect and finance me. It's not what I want, but… sometimes you have to make tough choices."
+    neko_girl "I'm studying graphic art design."
+    neko_girl "It's what I really love, and I hope to get into a field where I can put my skills to use."
+    neko_girl "But… if I can't find steady income soon, I might have to find a master who would protect and finance me."
+    neko_girl "It's not what I want, but… sometimes you have to make tough choices."
     "She sighs softly, her eyes reflecting both determination and a hint of worry."
-    neko_girl "It's hard, trying to balance everything. But I'm doing my best. I'm glad you're being honest with me. It makes me feel like… maybe we're in the same boat, just trying to make things work."
+    neko_girl "It's hard, trying to balance everything."
+    neko_girl "But I'm doing my best. I'm glad you're being honest with me."
+    neko_girl "It makes me feel like… maybe we're in the same boat,\n just trying to make things work."
     "She gives you a small, hopeful smile, clearly still interested in continuing the conversation."
     jump job_question_done
 
