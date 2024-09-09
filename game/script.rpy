@@ -219,8 +219,26 @@ label arrival_at_your_place:
     if persistent.knock_out_option == True:
         #"The Knockout"
         "You turn to say something, but before the words leave your mouth, she moves with lightning speed, delivering a sharp blow to the back of your head. Darkness floods your vision as you collapse to the floor, unconscious."
+        
+        # shake effect
+        show neko_girl happy at center:
+            linear 0.1 xalign 0.5 yalign 0.5
+            linear 0.1 xalign 0.48 yalign 0.5
+            linear 0.1 xalign 0.52 yalign 0.5
+            linear 0.1 xalign 0.5 yalign 0.5
+
+
+        # fade to black
+        scene black with dissolve
+        with Pause(1)
+        
         "When you regain consciousness, you're lying on a cold, hard surface."
         "The room around you is dimly lit, and you can hear faint whispers and shuffling nearby. As your vision clears, you realize you're not alone."
+
+        # fade to red
+        show scene_red with dissolve
+        with Pause(1)
+
         "Several figures are standing around you, all with the same feline features—ears, tails, sharp eyes. They're all neko women, watching you intently."
         "You try to move, but your limbs are restrained. Panic surges through you, but before you can react further, she steps into view, her expression serious but no longer hostile."
         neko_girl "You're awake. Good."
@@ -253,7 +271,22 @@ label arrival_at_your_place:
         "The air is cool but not biting—just enough to remind you of the warmth of the café you left behind and the closeness you felt there."
         "You walk side by side, your footsteps in sync, your breaths forming faint puffs in the cool air."
         "You come to a crossroad, a quiet intersection where the street narrows and the buildings seem to lean in, as if listening to your conversation. A streetlight above buzzes faintly, struggling to stay on."
+
+        # truck sound effect
+        play sound "audio/truck_sound.wav"
+
+        # start vpunch effect
+        scene bg room at start_vpunch_effect(0.2)
+        
         "The road is empty save for the distant rumble of a truck far off in the distance, its headlights barely visible through the haze of the city's ambient light."
+
+        # stop vpunch effect
+        scene bg room at stop_vpunch_effect
+
+        # fade to black
+        scene black with dissolve
+        with Pause(0.5)
+
         "She laughs softly at something you said, her voice bright against the muted sounds of the city night."
         "Her laugh is warm, and it makes you feel, just for a moment, like you're the only two people in the world."
         "She turns to you, her face framed by the moonlight, looking as if she's about to say something more, something important…"
