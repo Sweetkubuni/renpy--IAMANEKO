@@ -155,17 +155,17 @@ label food_question_done:
     menu:
         "I want to further my career.":
             $ persistent.knock_out_option = False
-            $ persistent.i_want_to_rule_the_world_option = False
             jump i_want_to_further_my_career
         "I want to abolish beast men apartheid.":
             $ persistent.knock_out_option = True
-            $ persistent.i_want_to_rule_the_world_option = False
             jump i_want_to_abolish_beast_men_apartheid
         "I want to rule the world.":
             if persistent.fav_food_option == True:
                 $ persistent.isekai_scene = True
+                $ persistent.knock_out_option = False
             elif persistent.fav_food_option == False:
                 $ persistent.knock_out_option = True
+                $ persistent.isekai_scene = False
             jump i_want_to_rule_the_world
 
 label i_want_to_further_my_career:
@@ -213,6 +213,7 @@ label go_back_to_your_place_no:
     jump end_of_story
 
 label arrival_at_your_place:
+    ###"[persistent.fav_food_option] [persistent.knock_out_option] [persistent.isekai_scene]"
     "The two of you walk back to your place, the night air crisp and quiet."
     "However, as soon as the door closes behind you, something unexpected happens."
     
