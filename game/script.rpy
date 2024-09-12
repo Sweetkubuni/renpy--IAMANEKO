@@ -155,18 +155,22 @@ label food_question_done:
     menu:
         "I want to further my career.":
             $ persistent.knock_out_option = False
+            $ persistent.isekai_scene = False
             jump i_want_to_further_my_career
         "I want to abolish beast men apartheid.":
             $ persistent.knock_out_option = True
+            $ persistent.isekai_scene = False
             jump i_want_to_abolish_beast_men_apartheid
         "I want to rule the world.":
             if persistent.fav_food_option == True:
-                $ persistent.isekai_scene = True
                 $ persistent.knock_out_option = False
+                $ persistent.isekai_scene = True
             elif persistent.fav_food_option == False:
                 $ persistent.knock_out_option = True
                 $ persistent.isekai_scene = False
             jump i_want_to_rule_the_world
+        "I just want to hookup.":
+            jump i_just_want_to_hookup
 
 label i_want_to_further_my_career:
     player "With a determined tone. \"I want to further my career, make a name for myself, and really succeed in my field.\""
@@ -187,6 +191,13 @@ label i_want_to_rule_the_world:
     player "With a casual shrug. \"Honestly? I just want to fuck. Life's too short to complicate things.\""
     neko_girl "She raises an eyebrow, a mischievous smile playing on her lips. \"Straight to the point, huh? I appreciate the honesty, though I'd say there's more to life than just that. Still… a bold answer like that takes guts.\""
     jump want_out_of_life_question_done
+
+label i_just_want_to_hookup:
+    player "With a casual shrug. \"Honestly? I just want to hookup. Life’s too short to complicate things.\""
+    neko_girl "She raises an eyebrow, a mischievous smile playing on her lips."
+    neko_girl "Straight to the point, huh? I appreciate the honesty, though I’d say there’s more to life than just that."
+    neko_girl "Still… a bold answer like that takes guts."
+    return
 
 label want_out_of_life_question_done:
     "The waiter returns after some time, clearing away the empty plates and thanking you both for dining at the café. The evening air has grown cooler, and the streetlights have come on, casting a soft glow over the scene."
